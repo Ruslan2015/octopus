@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="sqlite_jdbc-153ea3b5360-5d92f97439e59940" provider="generic" driver="sqlite_jdbc" name="SQLite - db.sqlite3" create-date="1459923826184" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="C:\MyCode\Workspace\octopus\db.sqlite3" url="jdbc:sqlite:C:\MyCode\Workspace\octopus\db.sqlite3" user="" type="dev">
+			<bootstrap/>
+		</connection>
+	</data-source>
+</data-sources>
