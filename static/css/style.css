@@ -26,7 +26,7 @@ mark, rp, rt, ruby, summary, time {
 body {
 	background:url(../images/bg_img.jpg) top center no-repeat #000;
 	border:0;
-	font:13px Arial, Helvetica, sans-serif;
+	font:13px Serif;
 	color:#3a3a3a;
 	line-height:20px;
 	min-width:980px;
@@ -92,6 +92,7 @@ h2.top {
 	-webkit-border-radius:6px 6px 0 0
 }
 h3 {
+
 	font-size:30px;
 	color:#000;
 	line-height:1.2em;
@@ -125,22 +126,22 @@ header {
 }
 #logo {
 	display:block;
-	background:url(../images/logo.png) 0 0 no-repeat;
+	background:url(../images/logo_temp.png) 0 0 no-repeat;
 	width:120px;
 	height:104px;
 	text-indent:-9999px
 }
 #slogan {
-	font-size:20px;
+	font-size:16px;
 	line-height:1.2em;
 	color:#fff;
 	float:left;
-	padding:95px 0 0 18px;
-	letter-spacing:-1px
+	padding:60px 0 0 18px;
+	letter-spacing:1px
 }
 #top_nav {
 	float:right;
-	padding:38px 56px 0 0
+	padding:15px 45px 0 0
 }
 #top_nav li {
 	float:left;
@@ -162,21 +163,24 @@ header {
 .nav3 {
 	background:url(../images/img_top3.gif) center 0 no-repeat
 }
+
 #menu {
 	padding:27px 0 0 42px
 }
+
 #menu li {
-	float:left;
+       float:left;
 	margin-left:-1px;
 	background:url(../images/menu_line.gif) bottom right no-repeat
 }
 #menu .end {
 	background:none
 }
+
 #menu li a {
 	display:block;
 	height:71px;
-	font-size:26px;
+	font-size:20px;
 	line-height:71px;
 	color:#fff;
 	text-decoration:none;
@@ -206,7 +210,7 @@ header {
 	padding-bottom:14px
 }
 .for_banners {
-	background:url(../images/bg_top_img.jpg) 0 0 no-repeat;
+	background:url(../images/bg_top_img_temp.jpg) 0 0 no-repeat;
 	width:100%;
 	height:342px;
 	padding-top:30px
@@ -574,7 +578,7 @@ footer a:hover {
 }
 .jqTransformSelectWrapper div {
 	float:left;
-	font:12px Arial, Helvetica, sans-serif;
+	font:12px Serif;
 	color:#7f7f7f;
 	display:block;
 	position:relative;
@@ -605,7 +609,7 @@ a.jqTransformSelectOpen {
 	left:0px;
 	background:#fff;
 	border:1px solid #e5e5e5;
-	font:12px Arial, Helvetica, sans-serif;
+	font:12px Serif;
 	display:none;
 	z-index:10;
 	padding:5px 0 2px 0;
@@ -659,7 +663,7 @@ a.jqTransformSelectOpen {
 #form_1 .input, #form_1 .input1, #form_1 .input2 {
 	background:#fff;
 	border:1px solid #e5e5e5;
-	font:12px Arial, Helvetica, sans-serif;
+	font:12px Serif;
 	color:#7f7f7f;
 	float:left;
 	padding:2px 7px;
@@ -699,7 +703,7 @@ a.jqTransformSelectOpen {
 #form_2 .input, #form_2 .input1, #form_2 .input2 {
 	background:#fff;
 	border:1px solid #e5e5e5;
-	font:12px Arial, Helvetica, sans-serif;
+	font:12px Serif;
 	color:#7f7f7f;
 	float:left;
 	padding:2px 7px;
@@ -755,7 +759,7 @@ a.jqTransformSelectOpen {
 #form_3 .input, #form_3 .input1, #form_3 .input2 {
 	background:#fff;
 	border:1px solid #e5e5e5;
-	font:12px Arial, Helvetica, sans-serif;
+	font:12px Serif;
 	color:#7f7f7f;
 	float:left;
 	padding:2px 7px;
@@ -819,7 +823,7 @@ a.jqTransformSelectOpen {
 #form_4 .input, #form_4 .input1, #form_4 .input2 {
 	background:#fff;
 	border:1px solid #e5e5e5;
-	font:12px Arial, Helvetica, sans-serif;
+	font:12px Serif;
 	color:#7f7f7f;
 	float:left;
 	padding:2px 7px;
@@ -870,7 +874,7 @@ a.jqTransformSelectOpen {
 .form_5 .input, .form_5 .input1, .form_5 .input2 {
 	background:#fff;
 	border:1px solid #e5e5e5;
-	font:12px Arial, Helvetica, sans-serif;
+	font:12px Serif;
 	color:#7f7f7f;
 	float:left;
 	padding:2px 7px;
@@ -1038,7 +1042,7 @@ a.jqTransformSelectOpen {
 	width:219px;
 	background:#fff;
 	border:1px solid #e5e5e5;
-	font:12px Arial, Helvetica, sans-serif;
+	font:12px Serif;
 	color:#7f7f7f;
 	float:left;
 	padding:2px 7px;
@@ -1049,7 +1053,7 @@ a.jqTransformSelectOpen {
 	width:479px;
 	background:#fff;
 	border:1px solid #e5e5e5;
-	font:12px Arial, Helvetica, sans-serif;
+	font:12px Serif;
 	color:#7f7f7f;
 	float:left;
 	padding:2px 7px;
