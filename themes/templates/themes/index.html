@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body_type_block %}
+<body id="page_tasks">
+{% endblock %}
+
+{% block body_block %}
+ <!--content -->
+  <section id="content">
+  <div class="wrapper pad1">
+      <article class="col1">
+        <div class="box1">          
+          <h2>Фильтр</h2>
+          <div class="pad"> <strong>Поле ввода</strong><br>
+{#            <ul class="pad_bot2 list1">#}
+{#              <li class="pad_bot1"> <span class="right color1">Исполнитель</span> <a href="book2.html">Агрегат</a> </li>#}
+{#            </ul>#}
+		  </div>
+		  <h2>Сортировка</h2>
+          <div class="pad"> <strong>По номеру</strong><br>
+{#            <ul class="pad_bot2 list1">#}
+{#              <li class="pad_bot1"> <span class="right color1">Исполнитель</span> <a href="book2.html">Агрегат</a> </li>#}
+{#            </ul>#}
+          </div>
+          <div class="pad"> <strong>По названию</strong><br>
+{#            <ul class="pad_bot2 list1">#}
+{#              <li class="pad_bot1"> <span class="right color1">Исполнитель</span> <a href="book2.html">Агрегат</a> </li>#}
+{#            </ul>#}
+          </div>
+        </div>
+      </article>
+      <article class="col2">
+        <div class="wrapper">
+          {% if themes_list %}
+            <ul>
+                {% for themes in themes_list %}
+                <li>{{ themes.name }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <strong>There are no categories present.</strong>
+        {% endif %}
+        </div>
+    </div>
+  </section>
+  <!--content end-->
+{% endblock %}

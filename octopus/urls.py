@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^tasks/', include('tasks.urls')),
     url(r'^mainpage/', include('mainpage.urls')),
+    url(r'^themes/', include('themes.urls')),
     url(r'^$', include('mainpage.urls')),
 ]

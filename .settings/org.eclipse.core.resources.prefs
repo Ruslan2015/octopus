@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
+encoding//mainpage/templates/mainpage/index.html=UTF-8
+encoding//tasks/templates/tasks/index.html=UTF-8
 encoding//tasks/views.py=utf-8
+encoding//themes/templates/themes/index.html=UTF-8
+encoding/data_test.py=UTF-8
