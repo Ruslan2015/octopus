@@ -19,16 +19,8 @@
 {#            </ul>#}
 		  </div>
 		  <h2>Сортировка</h2>
-          <div class="pad"> <strong>По номеру</strong><br>
-{#            <ul class="pad_bot2 list1">#}
-{#              <li class="pad_bot1"> <span class="right color1">Исполнитель</span> <a href="book2.html">Агрегат</a> </li>#}
-{#            </ul>#}
-          </div>
-          <div class="pad"> <strong>По названию</strong><br>
-{#            <ul class="pad_bot2 list1">#}
-{#              <li class="pad_bot1"> <span class="right color1">Исполнитель</span> <a href="book2.html">Агрегат</a> </li>#}
-{#            </ul>#}
-          </div>
+          <div class="pad"> <strong><a href="{% url 'themes_order_number' %}">По номеру</a></strong></div>
+          <div class="pad"> <strong><a href="{% url 'themes_order_name' %}">По названию</a></strong></div>
         </div>
       </article>
       <article class="col2">
