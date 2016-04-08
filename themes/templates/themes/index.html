@@ -26,15 +26,21 @@
       <article class="col2">
         <div class="wrapper">
           {% if themes_list %}
-            <ul>
+            <table>
                 {% for themes in themes_list %}
-                <li>{{ themes.name }}</li>
+                <tr>
+                <td>{{ themes.number }}</td>
+                <td>{{ themes.name }}</td>
+                <td>{{ themes.specification }}</td>
+                <td>{{ themes.status }}</td>
+                </tr>
                 {% endfor %}
-            </ul>
+            </table>
         {% else %}
-            <strong>There are no categories present.</strong>
+            <strong>Темы в базе данных отсутсвуют!</strong>
         {% endif %}
         </div>
+       </article>
     </div>
   </section>
   <!--content end-->
