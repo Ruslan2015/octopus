@@ -20,9 +20,14 @@ table {
 	border-collapse:collapse;
 }
 
-.tr_1 {
-	background: #123fff;
+tr:nth-child(odd){
+	background: #A5DEFC;
 }
+
+tr:nth-child(even){
+	background: #F4F3F8;
+}
+
 img {
 	vertical-align:top
 }

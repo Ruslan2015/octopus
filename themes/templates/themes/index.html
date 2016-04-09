@@ -28,12 +28,12 @@
           {% if themes_list %}
             <table>
                 {% for themes in themes_list %}
-                <tr class='tr_1'>
-                <td>{{ themes.number }}</td>
-                <td>{{ themes.name }}</td>
-                <td>{{ themes.specification }}</td>
-                <td>{{ themes.status }}</td>
-                </tr>
+                	<tr>         	
+                	<td width=50px>{{ themes.number }}</td>
+                	<td width=250px>{{ themes.name }}</td>
+                	<td width=150px>{{ themes.specification }}</td>
+                	<td width=70px>{{ themes.status }}</td>
+                	</tr>
                 {% endfor %}
             </table>
         {% else %}
