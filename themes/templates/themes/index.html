@@ -13,29 +13,44 @@
       <article class="col1">
         <div class="box1">          
           <h2>Фильтр</h2>
-          <div class="pad"> <strong>Поле ввода</strong><br>
-{#            <ul class="pad_bot2 list1">#}
-{#              <li class="pad_bot1"> <span class="right color1">Исполнитель</span> <a href="book2.html">Агрегат</a> </li>#}
-{#            </ul>#}
-		  </div>
-		  <h2>Сортировка</h2>
-          <div class="pad"> <strong><a href="{% url 'themes_order_number' %}">По номеру</a></strong></div>
-          <div class="pad"> <strong><a href="{% url 'themes_order_name' %}">По названию</a></strong></div>
+          <div class="pad"> <strong>
+          <form id="themes" method="post" action="{% url 'themes' %}">
+          	{% csrf_token %}          	
+          	{{ form }}
+          	<input type="submit" name="submit" value="Применить" />
+          </form>
+          </strong><br>
+		  </div>		  
         </div>
       </article>
       <article class="col2">
         <div class="wrapper">
-          {% if themes_list %}
+         <div class="pagination">
+		    <span class="step-links">
+		        {% if themes.has_previous %}
+		            <a href="?page={{ themes.previous_page_number }}">предыдущая</a>
+		        {% endif %}
+		
+		        <span class="current">
+		            Страница {{ themes.number }} из {{ themes.paginator.num_pages }}.
+		        </span>
+		
+		        {% if themes.has_next %}
+		            <a href="?page={{ themes.next_page_number }}">следующая</a>
+		        {% endif %}
+		    </span>
+		</div>
+		{% if themes %}
             <table>
-                {% for themes in themes_list %}
+                {% for theme in themes %}
                 	<tr>         	
-                	<td width=50px>{{ themes.number }}</td>
-                	<td width=250px>{{ themes.name }}</td>
-                	<td width=150px>{{ themes.specification }}</td>
-                	<td width=70px>{{ themes.status }}</td>
+                	<td width=50px>{{ theme.number }}</td>
+                	<td width=250px>{{ theme.name }}</td>
+                	<td width=150px>{{ theme.specification }}</td>
+                	<td width=70px>{{ theme.status }}</td>
                 	</tr>
                 {% endfor %}
-            </table>
+            </table>   
         {% else %}
             <strong>Темы в базе данных отсутсвуют!</strong>
         {% endif %}

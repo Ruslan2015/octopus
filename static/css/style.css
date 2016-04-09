@@ -80,7 +80,7 @@ h1 {
 h2 {
 	font-size:20px;
 	line-height:1.2em;
-	padding:12px 32px 16px 32px;
+	padding:12px 32px 5px 32px;
 	margin-bottom:14px;
 	background:#f7f7f7;
 	position:relative;
@@ -225,6 +225,7 @@ header {
 .pad {
 	padding:0 27px 0 32px
 }
+
 .pad_bot1 {
 	padding-bottom:10px
 }

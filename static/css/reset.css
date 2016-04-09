@@ -28,6 +28,10 @@ tr:nth-child(even){
 	background: #F4F3F8;
 }
 
+input {
+	background: #F4F3F8;	
+}
+
 img {
 	vertical-align:top
 }

@@ -28,6 +28,12 @@ def populate():
         name="АУПН-117",
         specification = "ТУ 100.400.001.123",
         status = "НИОКР")
+    
+    for i in range(100):
+        add_themes(number = str(i),
+            name="АУПН-117",
+            specification = "ТУ 100.400.001.123",
+            status = "НИОКР")
 
 
 def add_themes(number, name, specification, status):
