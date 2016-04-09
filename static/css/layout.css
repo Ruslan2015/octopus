@@ -9,6 +9,7 @@
 	padding-left:42px;
 	width:557px
 }
+
 .cols {
 	width:263px
 }
@@ -37,3 +38,12 @@
 	width:560px
 }
 /* index-6.html */
+
+/* tasks.html */
+#page_tasks .col1 {
+	width:180px
+}
+#page_tasks .col2 {
+	width:660px
+}
+
