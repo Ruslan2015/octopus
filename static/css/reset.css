@@ -14,15 +14,14 @@ ol, ul {
 blockquote, q {
 	quotes:none
 }
-/*
-table, table tr, table td {
-	padding:4px;
-	border:4px double black;
+
+table {
+	padding:10px;	
 	border-collapse:collapse;
 }
-*/
+
 .tr_1 {
-	background: #123456;
+	background: #123fff;
 }
 img {
 	vertical-align:top
