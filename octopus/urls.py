@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^tasks/', include('tasks.urls')),
     url(r'^mainpage/', include('mainpage.urls')),
     url(r'^themes/', include('themes.urls')),
+    url(r'^numeric/', include('numeric.urls')),
     url(r'^$', include('mainpage.urls')),
 ]

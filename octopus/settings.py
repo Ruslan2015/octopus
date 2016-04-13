@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'tasks',
     'mainpage',
     'themes',
+    'numeric',
 ]
 
 MIDDLEWARE_CLASSES = [

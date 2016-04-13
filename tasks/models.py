@@ -1,45 +1,45 @@
-from django.db import models
+п»їfrom django.db import models
 
 # Create your models here.
 
 class Tasks(models.Model):
-    #номер задания
+    #РЅРѕРјРµСЂ Р·Р°РґР°РЅРёСЏ
     number = models.CharField(max_length = 6)
-    #краткое содержание задания
+    #РєСЂР°С‚РєРѕРµ СЃРѕРґРµСЂР¶Р°РЅРёРµ Р·Р°РґР°РЅРёСЏ
     context = models.CharField(max_length = 250)
-    #требуемый результат
+    #С‚СЂРµР±СѓРµРјС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚
     desired_result = models.CharField(max_length = 250)
-    #тема по классификатору
-    theme = models.ForeignKey()
-    #список рассылки
-    list = models.CharField(max_length = 250)
-    #дата подачи заявки
+    #С‚РµРјР° РїРѕ РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂСѓ
+    #theme = models.ForeignKey()
+    #СЃРїРёСЃРѕРє СЂР°СЃСЃС‹Р»РєРё
+    netlist = models.CharField(max_length = 250)
+    #РґР°С‚Р° РїРѕРґР°С‡Рё Р·Р°СЏРІРєРё
     datatime_order = models.DateTimeField()
-    #дата публикации на согласование
+    #РґР°С‚Р° РїСѓР±Р»РёРєР°С†РёРё РЅР° СЃРѕРіР»Р°СЃРѕРІР°РЅРёРµ
     datatime_accom = models.DateTimeField()
-    #дата утверждения задания
+    #РґР°С‚Р° СѓС‚РІРµСЂР¶РґРµРЅРёСЏ Р·Р°РґР°РЅРёСЏ
     datatime_approv = models.DateTimeField()
-    #требуемый срок завершения задания
+    #С‚СЂРµР±СѓРµРјС‹Р№ СЃСЂРѕРє Р·Р°РІРµСЂС€РµРЅРёСЏ Р·Р°РґР°РЅРёСЏ
     datatime_deadline = models.DateTimeField()
-    #дата завершения задания
+    #РґР°С‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ Р·Р°РґР°РЅРёСЏ
     datatime_finished = models.DateTimeField()
-    #список номеров агрегатов
+    #СЃРїРёСЃРѕРє РЅРѕРјРµСЂРѕРІ Р°РіСЂРµРіР°С‚РѕРІ
     list_number = models.CharField(max_length = 250)
-    #список шифров учета затрат по заданию
+    #СЃРїРёСЃРѕРє С€РёС„СЂРѕРІ СѓС‡РµС‚Р° Р·Р°С‚СЂР°С‚ РїРѕ Р·Р°РґР°РЅРёСЋ
     list_code = models.CharField(max_length = 250)
-    #подразделение заказчика
-    dep_employer = models.ForeignKey()
-    #заказчик
-    employer = models.ForeignKey()
-    #подразделение исполнителя
-    dep_worker = models.ForeignKey()
-    #исполнитель
-    worker = models.ForeignKey()
-    #ссылка на бланк задания
+    #РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ Р·Р°РєР°Р·С‡РёРєР°
+    #dep_employer = models.ForeignKey()
+    #Р·Р°РєР°Р·С‡РёРє
+    #employer = models.ForeignKey()
+    #РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ РёСЃРїРѕР»РЅРёС‚РµР»СЏ
+    #dep_worker = models.ForeignKey()
+    #РёСЃРїРѕР»РЅРёС‚РµР»СЊ
+    #worker = models.ForeignKey()
+    #СЃСЃС‹Р»РєР° РЅР° Р±Р»Р°РЅРє Р·Р°РґР°РЅРёСЏ
     href_blank = models.CharField(max_length = 250)
-    #ссылка на документ о завершении задания
+    #СЃСЃС‹Р»РєР° РЅР° РґРѕРєСѓРјРµРЅС‚ Рѕ Р·Р°РІРµСЂС€РµРЅРёРё Р·Р°РґР°РЅРёСЏ
     href_finished = models.CharField(max_length = 250)
-    #список ссылок на результаты задания
+    #СЃРїРёСЃРѕРє СЃСЃС‹Р»РѕРє РЅР° СЂРµР·СѓР»СЊС‚Р°С‚С‹ Р·Р°РґР°РЅРёСЏ
     href_results = models.TextField()
     
     
