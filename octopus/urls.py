@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^themes/', include('themes.urls')),
     url(r'^numeric/', include('numeric.urls')),
     url(r'^$', include('mainpage.urls')),
+    url(r'^oshs/', include('oshs.urls')),
 ]

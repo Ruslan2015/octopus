@@ -1,5 +1,7 @@
 ﻿from django.db import models
-
+from django.contrib.auth.models import User
+ 
+from themes.models import Themes
 # Create your models here.
 
 class Tasks(models.Model):
@@ -10,7 +12,7 @@ class Tasks(models.Model):
     #требуемый результат
     desired_result = models.CharField(max_length = 250)
     #тема по классификатору
-    #theme = models.ForeignKey()
+    theme = models.ForeignKey(Themes)
     #список рассылки
     netlist = models.CharField(max_length = 250)
     #дата подачи заявки
@@ -27,14 +29,10 @@ class Tasks(models.Model):
     list_number = models.CharField(max_length = 250)
     #список шифров учета затрат по заданию
     list_code = models.CharField(max_length = 250)
-    #подразделение заказчика
-    #dep_employer = models.ForeignKey()
     #заказчик
-    #employer = models.ForeignKey()
-    #подразделение исполнителя
-    #dep_worker = models.ForeignKey()
+    employer = models.ForeignKey(User)
     #исполнитель
-    #worker = models.ForeignKey()
+    #worker = models.ForeignKey(User)
     #ссылка на бланк задания
     href_blank = models.CharField(max_length = 250)
     #ссылка на документ о завершении задания
@@ -42,5 +40,7 @@ class Tasks(models.Model):
     #список ссылок на результаты задания
     href_results = models.TextField()
     
-    
+    def __str__(self):
+        retstr = self.number + '-' + self.context
+        return retstr
     
