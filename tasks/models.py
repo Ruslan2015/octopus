@@ -30,15 +30,19 @@ class Tasks(models.Model):
     #список шифров учета затрат по заданию
     list_code = models.CharField(max_length = 250)
     #заказчик
-    employer = models.ForeignKey(User)
+    employer = models.ForeignKey(User, on_delete = models.CASCADE, related_name='+')
     #исполнитель
-    #worker = models.ForeignKey(User)
+    worker = models.ForeignKey(User, on_delete = models.CASCADE, related_name='+')
     #ссылка на бланк задания
     href_blank = models.CharField(max_length = 250)
     #ссылка на документ о завершении задания
     href_finished = models.CharField(max_length = 250)
     #список ссылок на результаты задания
     href_results = models.TextField()
+    #если нужно ОТК
+    needed_otk = models.BooleanField()
+    #если нужно ВП
+    needed_vp = models.BooleanField()
     
     def __str__(self):
         retstr = self.number + '-' + self.context
