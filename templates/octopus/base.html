@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="{% static "css/reset.css" %}" type="text/css" media="all">
 <link rel="stylesheet" href="{% static "css/layout.css" %}" type="text/css" media="all">
 <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" media="all">
-<script type="text/javascript" src="{% static "js/jquery-1.5.2.js" %}" ></script>
+<script type="text/javascript" src="{% static "js/jquery-1.12.3.js" %}"></script>
 <script type="text/javascript" src="{% static "js/cufon-yui.js" %}"></script>
 <script type="text/javascript" src="{% static "js/cufon-replace.js" %}"></script>
 <script type="text/javascript" src="{% static "js/Cabin_400.font.js" %}"></script>
@@ -18,6 +18,14 @@
 <script type="text/javascript" src="{% static "js/jquery.nivo.slider.pack.js" %}"></script>
 <script type="text/javascript" src="{% static "js/atooltip.jquery.js" %}"></script>
 <script type="text/javascript" src="{% static "js/script.js" %}"></script>
+
+<!-- Раскрывающийся список -->
+<script type="text/javascript" src="{% static "js/ul-drop.js" %}" ></script>
+<!-- AJAX для дерева -->
+<script type="text/javascript" src="{% static "js/tree-ajax.js" %}"></script>
+
+
+
 </head>
 {% block body_type_block %}{% endblock %}
 <div class="main">
@@ -41,7 +49,7 @@
         <li><a href="/themes/"><span><span>Темы</span></span></a></li>
         <li><a href="/numeric/"><span><span>Нумерация</span></span></a></li>
         <li><a href="/oshs/"><span><span>ОШС</span></span></a></li>
-{#        <li><a href="safety.html"><span><span>Архив</span></span></a></li>#}
+        <li><a href="/tree/index/"><span><span>Дерево</span></span></a></li>#}
         <li class="end"><a href="/tasks/"><span><span>Задания</span></span></a></li>
       </ul>
     </nav>

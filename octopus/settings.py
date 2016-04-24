@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'themes',
     'numeric',
     'oshs',
+    'tree',
 ]
 
 MIDDLEWARE_CLASSES = [

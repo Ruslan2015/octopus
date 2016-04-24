@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body_type_block %}
+<body id="page_tasks">
+{% endblock %}
+
+{% block body_block %}
+<!--content -->
+<section id="content">
+<div class="wrapper pad1">
+      <article class="col1">
+        <div class="box1">          
+          	{% if list_all_tree %}
+				{% autoescape off %}
+				{{ list_all_tree }}
+				{% endautoescape %}
+			{% else %}
+				<strong>Узлы в базе данных отсутсвуют!</strong>
+			{% endif %}		  
+        </div>
+      </article>
+      <article class="col2">
+        <div class="wrapper">
+			<strong id="node_context">Содержимое узла</strong>	
+        </div>
+       </article>
+    </div>
+</section>
+<!--content end-->
+{% endblock %}

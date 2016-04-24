@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^numeric/', include('numeric.urls')),
     url(r'^$', include('mainpage.urls')),
     url(r'^oshs/', include('oshs.urls')),
+    url(r'^tree/', include('tree.urls')),
 ]
