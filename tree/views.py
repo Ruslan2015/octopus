@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 
 from .models import Tree
 
@@ -20,4 +20,5 @@ def show_node_context(request):
     node = Tree.objects.filter(id=node_id)
     print(node)
     resstr = 'Уровень: '+str(node[0].level)+'Left_key: '+str(node[0].left_key)+'Right_key: '+str(node[0].right_key)
+    print(resstr)
     return HttpResponse(resstr)

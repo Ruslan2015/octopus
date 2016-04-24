@@ -20,15 +20,19 @@ class TreeManager(models.Manager):
         res_qs = self.order_by('left_key')
         res = '<ul class="ul-treefree ul-dropfree">'
         inline = 0
+        endsubtree = False
         for rec in res_qs:
             #Проверяем, есть ли потомки
             if((rec.right_key - rec.left_key) == 1):
                 btn = '<button class="tree_node" data-catid="'+str(rec.id)+'" type="button">'+str(rec.id)+'</button>'
                 res = res + '<li>' + btn + '</li>'
-                if(inline != 0):
-                    res = res + '</ul>'
-                    inline = inline - 1
+                endsubtree = True                
             else:
+                if(endsubtree  == True):
+                    for i in range(inline - rec.level + 1):
+                        res = res + '</ul></li>'
+                        inline = inline - 1                    
+                    endsubtree = False          
                 btn = '<button class="tree_node" data-catid="'+str(rec.id)+'" type="button">'+str(rec.id)+'</button>'
                 res = res + '<li>' + btn + '<ul>'
                 inline = inline +1
