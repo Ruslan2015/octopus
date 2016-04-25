@@ -16,9 +16,9 @@ def show_node_context(request):
     node_id = None
     if request.method == 'GET':
         node_id = request.GET['node_id']
-        print(node_id)
+        request.session['node_id'] = node_id
     node = Tree.objects.filter(id=node_id)
     print(node)
     resstr = 'Уровень: '+str(node[0].level)+'Left_key: '+str(node[0].left_key)+'Right_key: '+str(node[0].right_key)
-    print(resstr)
+    resstr = resstr + 'куки: node_id---' + request.session.get('node_id')
     return HttpResponse(resstr)
