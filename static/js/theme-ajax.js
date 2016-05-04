@@ -12,9 +12,9 @@ $(document).ready(function(){
 				json = eval("(" + data + ")");
 				// alert(json.success)
 				var obj = jQuery.parseJSON(data);
-				alert(data);
-				$("#node_context").html('Содержимое узла');
-				$("#current_level").html('Текущий узел');
+				//alert(data);
+				$("#active_theme_id").html(obj['resnum']);
+				$("#active_theme_name").html(obj['resname']);
 				
 				});			
 	});

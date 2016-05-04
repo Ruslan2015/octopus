@@ -136,24 +136,41 @@ header {
 	line-height:1.2em;
 	color:#fff;
 	float:left;
-	padding:30px 0 0 18px;
+	padding:20px 0 0 18px;
 	letter-spacing:1px
 }
-#active_theme {
-	font-size:16px;
+#active_bunner {
+	font: 26px bolder;
+	text-shadow: #fff 4px 4px 5px; 	
 	line-height:1.2em;
-	color:#fff;
-	float:left;
-	padding:60px 0 0 18px;
+	color:#f82932;
+	float:left;	
+	padding:50px 0 0 18px;
 	letter-spacing:1px
+}
+#active_theme_id {
+	/* font-size:26px; */
+	/* line-height:1.2em; */
+	/* color:#f82932; */
+	/* float:left;	 */
+	/* padding:60px 0 0 18px; */
+	/* letter-spacing:1px */
+}
+#active_theme_name {
+	/* font-size:26px; */
+	/* line-height:1.2em; */ 
+	/* color:#f82932;*/ 
+	/* float:left;	*/ 
+	/* padding:60px 0 0 18px;*/
+	/* letter-spacing:1px*/
 }
 #top_nav {
 	float:right;
-	padding:15px 45px 0 0
+	padding:10px 35px 0 0
 }
 #top_nav li {
 	float:left;
-	padding-left:25px;
+	padding-left:5px;
 	width:100px;
 	text-align:center
 }

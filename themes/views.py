@@ -43,9 +43,8 @@ def show_theme_active(request):
     theme_id = None
     if request.method == 'GET':
         theme_id = request.GET['theme_id']
-        request.session['theme_id'] = theme_id
-    theme_active = Themes.objects.filter(id=theme_id)
-    print(theme_active)
-    resnum = 'Номер темы:' +  request.session.get('node_id')
-    resname = 'Название темы'
-    return HttpResponse('{"resnum" :"'+resnum+'", "resname" : "'+resname+'"}')
+        request.session['theme_id'] = theme_id    
+    theme_active = Themes.objects.show_active(theme_id)
+    print(str(theme_active[0].id))
+    resnum = request.session.get('theme_id')    
+    return HttpResponse('{"resnum" :"'+resnum+'", "resname" : "'+str(theme_active[0].name)+'"}')
