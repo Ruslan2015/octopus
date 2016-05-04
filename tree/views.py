@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from .models import Tree
 
 # Create your views here.
-
+#Тест git
 def index(request):
     print("index")
     list_all_tree = Tree.objects.get_all_tree()
