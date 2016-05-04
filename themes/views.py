@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import FilterThemes
+from django.http import HttpResponse
 
 # Create your views here.
 from .models import Themes
@@ -36,3 +37,15 @@ def index(request):
 #     return render_to_response('themes/index.html', {'form': form, 'themes': themes})
     return render(request, 'themes/index.html', {'form': form, 'themes': themes})
    
+def show_theme_active(request):
+
+    print("Show_theme_active")
+    theme_id = None
+    if request.method == 'GET':
+        theme_id = request.GET['theme_id']
+        request.session['theme_id'] = theme_id
+    theme_active = Themes.objects.filter(id=theme_id)
+    print(theme_active)
+    resnum = 'Номер темы:' +  request.session.get('node_id')
+    resname = 'Название темы'
+    return HttpResponse('{"resnum" :"'+resnum+'", "resname" : "'+resname+'"}')

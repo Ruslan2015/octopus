@@ -44,7 +44,7 @@
             <table>
                 {% for theme in themes %}
                 	<tr>         	
-                	<td width=50px>{{ theme.number }}</td>
+                	<td width=50px><button class="theme_item" data-catid="{{ theme.number }}" type="button">{{ theme.number }}</button></td>
                 	<td width=250px>{{ theme.name }}</td>
                 	<td width=150px>{{ theme.specification }}</td>
                 	<td width=70px>{{ theme.status }}</td>
